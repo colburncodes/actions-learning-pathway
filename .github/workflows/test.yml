@@ -1,0 +1,9 @@
+name: test-file
+on: push
+jobs:
+  test-file-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out committed code
+        uses: actions/checkout@v3
+      - run: echo "$(cat test_file.txt)"
